@@ -17,4 +17,7 @@ BEGIN
          v_vl_tot_item := 00;
   
   end loop;  
+EXCEPTION
+	WHEN OTHERS THEN
+		raise_application_error( -20003, SQLErrM);		
 END PRC_AFUNDA_BARCO;
